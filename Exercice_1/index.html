@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ceci est notre première page HTML</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <!-- style>
+            /* Sélectionne tous les éléments <p> de la page */
+            p {
+                color: green;
+            }
+
+            /* Sélectionne tous les éléments <h4> de la page */
+            h4 {
+                /* color: #b81cac; */
+                color: rgb(184, 28, 172);
+            }
+
+            /* 
+             * Classe CSS avec nom personnalisé que l'on applique nous même
+             * sur les éléments de la page
+             */
+            .ma_classe {
+                border: 10px solid #000000;
+            }
+
+            /*
+             * Classe CSS avec nom personnalisé que l'on applique sur
+             * un seul élément de la page en cours
+             */
+            #mon_id {
+                color: blue;
+            }
+
+            #mon_id_2 {
+                color:indigo;
+            }
+        </style -->
+    </head>
+    <body>
+        <!-- <p> type block : est un paragraphe -->
+        <!-- NE PAS UTILISER ! -->    
+        <!-- p style="color:red" -->
+        <p id="mon_id">
+            <!-- <em> type inline : la priorité du texte est moins important que le reste -->
+            <em>Ceci est ma première phrase !</em><br>
+            <!-- <strong> type inline : la priorité du texte est plus important que le reste -->
+            Je suis bien <strong>content et heureux</strong> à la fois !
+        </p>
+
+        <!-- Balises Heading au nombre de site - Type block -->
+        <h1 id="mon_id_2">H1 - Mon titre (un seul par page)</h1>
+        <h2>H2 - Sous-titre de H1</h2>
+        <h3>H3 - Sous-titre de H2</h3>
+        <h4>H4 - Sous-titre de H3</h4>
+        <h5>H5 - Sous-titre de H4</h5>
+        <h6>H6 - Sous-titre de H5</h6>
+
+        <!-- Orderer List : Liste ordonnée - Type block -->
+        <ol>
+            <li>Ceci est le premier élément de ma liste</li>
+            <li>Ceci est mon deuxième élément</li>
+            <li>
+                Ceci est mon dernier élément
+                <ul>
+                   <li>Oui oui le dernier</li>
+                   <li>C'est fini !</li>
+                </ul>
+            </li>
+        </ol>
+
+        <!-- Unorderer List : Liste non-ordonnée - Type block -->
+        <ul>
+            <li>Oeufs</li>
+            <li>Farine</li>
+            <li>
+                Lait
+                <!-- Sous-liste d'un élement de la liste principal -->
+                <ul>
+                    <li>250 cl</li>
+                    <li>Lait entier</li>
+                </ul>
+            </li>
+            <li>Sucre vanillé</li>
+        </ul>
+
+        <!-- <img> type inline et auto-fermante -->
+        <img class="ma_classe" src="images/unsplash.jpg" width="300" height="150" alt="Lever de soleil au bord d'un lac">
+
+        <!-- <a> - Type block - Lien hypertexte -->
+        <!-- a href="https://writecode.fr">WriteCode</a -->
+        <!--a href="https://core.ac.uk/download/pdf/20645657.pdf">Informatique durable</a -->
+        <!--a href="images/unsplash.jpg">Afficher image</a -->
+        <a href="page2.html">Page 2</a>
+
+        <!-- <div> : type block -->
+        <!-- <span> : type inline - Aucune valeur sémentique -->
+            <div class="ma_classe">
+                <h2>Titre de mon article</h2>
+                <p>
+                    Résumé de mon <span>article</span>
+                </p>
+                <a href="#">Lire la suite</a>
+            </div>
+
+            <div>
+                <h2>Titre de mon article</h2>
+                <p>Résumé de mon article</p>
+                <a href="#">Lire la suite</a>
+            </div>
+    </body>
+</html>
