@@ -1,0 +1,239 @@
+/* Ceci est un commentaire */
+
+/* Donne les valeurs générales de la page */
+body {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+header img { /* L'espace entre les deux mots désigne "dans" */
+    width: 150px;
+}
+
+/* Position la navigation à droite de l'écran */
+header nav {
+    display: none;
+}
+
+/* Retire les points du listing */
+header nav ul {
+    list-style-type: none;
+}
+
+/* Met les "li" les uns à côté des autres et les espaces de 15 px */
+header nav ul li {
+    display: inline;
+    margin-left: 15px;
+}
+
+/* Applique une marge extérieur sur le header */
+header {
+    padding: 15px;
+    border-bottom: 2px dotted gray;
+}
+
+/* Enlève le soulignement sur les liens et donne une couleur aux liens */
+header nav ul li a {
+    text-decoration: none;
+    /* color: #e88e0c; */
+    color: rgb(232, 142, 12);
+}
+
+/* Change le couleur du lien au survol de la sourir sur l'élément */
+header nav ul li a:hover { /* Pas d'espace entre l'élément et la pseudo-classe */
+    color: #6b4106;
+}
+
+main {
+    display: block;
+    /* padding-left: 15px;
+    padding-right: 15px; */
+    padding: 0 15px 0 15px; /* Dans l'ordre des aiguilles d'une montre : haut, droite, bas, gauche */
+}
+
+main aside {
+    display: none;
+}
+
+main section {
+    width: 100%;
+}
+
+main section h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+main section img {
+    width: 200px;
+    border-radius: 50%;
+    /*
+     * 1. offset sur l'axe "x" - horizontal (décalage à droite)
+     * 2. offset sur l'axe "y" - vertical (décalage en bas)
+     * 3. blur-radius : fondu sur l'axe "x"
+     * 4. blur-radius : fondu sur l'axe "y"
+     * 5. Couleur de l'ombre
+     */
+    box-shadow: 6px 6px 10px 10px rgba(0, 0, 0, 0.15); /* 0.15 = 15% / Alpha (transparence) : 1 = 100%; 0 = 0% */
+}
+
+footer {
+    text-align: center;
+    border-top: 2px dotted gray;
+}
+
+main section table {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+main section table thead th,
+main section table tbody td { /* la virgule désine "et" */
+    border: 1px solid black;
+}
+
+/* Cible toutes les lignes impaires du tableau */
+main section table tbody tr:nth-child(odd) {
+    background-color: lightskyblue;
+}
+
+/* Cible toutes les lignes paires du tableau */
+main section table tbody tr:nth-child(even) {
+    background-color: yellowgreen;
+}
+
+/* Cible le 3ème élément du tableau */
+main section table tbody tr:nth-child(3) {
+    background-color: tomato;
+}
+
+/* Cible le premier élément du tableau */
+main section table tbody tr:first-child {
+    color: white;
+    font-weight: bold;
+}
+
+/* Cible le dernier élément du tableau */
+main section table tbody tr:last-child {
+    color: #0d41c2;
+    font-weight: bold;
+}
+
+/* Applique un css au survol de la ligne du tableau */
+main section table tbody tr:hover {
+    background-color: yellow;
+}
+
+/* Applique un css au survol de la cellule du tableau */
+main section table tbody tr td:hover {
+    background-color: red;
+}
+
+/* le chevron fermant ">" désigne le premier élément trouvé */
+/* main section > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+} */
+
+/* Positionne les éléments contenu dans la "div" en grille */
+main section div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px; /* Espace entre chaque cellule */
+}
+
+main section div article {
+    border: 1px dashed green;
+    padding: 5px;
+}
+
+/* Positionne les éléments de la "div" l'un à côté de l'autre */
+main section form div {
+    display: flex;
+}
+
+main section form div label {
+    flex: 1;
+}
+
+main section form div input[type="email"] {
+    font-size: 1.3rem;
+    color: red;
+}
+
+main section form div input {
+    width: 75%;
+}
+
+main section form button {
+    border: none;
+    background-color: #4f7ff7;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin: auto;
+    margin-top: 15px;
+    display: block;
+}
+
+/*
+ * Smartphones
+ * Pour tous les écrans dont la largeur ne dépassent pas
+ * les 576 pixels
+ */
+/* @media screen and (max-width: 576px) {
+
+    body {
+        background-color: #4f7ff7;
+        color: white;
+    }
+
+} */
+
+/* Tablette */
+/* Smartphone : 0px à 576px -> CSS "basique" */
+/* Tablette : 577px à 1199px -> Une règle média queries */
+/* Ordinateur : 1200px à au delà -> Une règle média queries */
+@media screen and (min-width: 577px) {
+
+    header nav {
+        display: block;
+        float: right;
+    }
+
+    main aside {
+        display: block;
+        width: 25%;
+        border-right: 2px dotted gray;
+        margin-right: 20px;
+        padding-right: 20px;
+    }
+
+    main section {
+        width: 75%;
+    }
+
+    main {
+        display: flex;
+    }
+
+    main section div {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px; /* Espace entre chaque cellule */
+    }
+
+}
+
+/* Ordinateur */
+@media screen and (min-width: 1200px) {
+
+    main section div {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px; /* Espace entre chaque cellule */
+    }
+
+}
