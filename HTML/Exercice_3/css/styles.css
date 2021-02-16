@@ -1,0 +1,135 @@
+/* "*" sélecteur universel. Applique les directives CSS à TOUS LES ELEMENTS de ma page */
+* {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    color: #49525c;
+    margin: 0;
+}
+
+body {
+    background-color: #f6f9fc;
+    background-image: url(../images/background.png);
+}
+
+header {
+    width: 100vw; /* viewport-width - Largeur totale de la page */
+    background-color: white;
+    border-bottom: 1px solid #e6e6ea;
+    padding: 10px 0 10px 0;
+    /* position: fixed; */
+}
+
+header div {
+    width: 60%;
+    margin: auto;
+    display: flex;
+
+    /* Les éléments sont répartis équitablement
+    Le bord du premier est aligné sur le 
+    début du conteneur et la fin du dernier
+    est alignée sur la fin du conteneur */
+    justify-content: space-between;
+
+    /* Les éléments sont regroupés au centre */
+    align-items: center;
+}
+
+
+
+header div > a img {
+    width: 12px;
+}
+
+/*
+Classe personnalisé via un nom. Attribut à utiliser dans le HTML est "class="
+.arrow {
+    width: 12px;
+}
+
+Classe personnalisé via un nom. Attribut à utiliser dans le HTML est "id="
+#arrow {
+    width: 12px;
+}
+*/
+
+.logo {
+    width: 120px;
+}
+
+header div nav ul {
+    list-style-type: none;
+}
+
+header div nav ul li {
+    display: inline;
+    margin-left: 30px;
+}
+
+header div nav ul li a {
+    text-decoration: none;
+}
+
+header div a:hover {
+    color: #ee7470;
+}
+
+main section {
+    width: 60%;
+    margin: auto; /* Centre un élement de type block */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 120px;
+    align-items: center;
+}
+
+main section div h1 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.introducing {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.5; /* Hauteur de ligne */
+}
+
+.email {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+main section div button {
+    background-color: #ee7470;
+    color: white;
+
+    /* 
+     * On peut aussi l'écrire de cette manière lorqu'il y a une répétition :
+     * padding: 10px 25px;
+     */
+    padding: 10px 25px 10px 25px;
+    border-radius: 5px;
+    border: none;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+
+main section div button:hover {
+    background-color: #be3631;
+}
+
+body > section {
+    text-align: center;
+}
+
+body > section img {
+    width: 70px;
+    margin-bottom: 12px;
+    margin-top: 50px;
+}
+
+body > section p {
+    font-size: 0.80rem;
+}

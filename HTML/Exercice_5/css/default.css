@@ -1,0 +1,163 @@
+/*
+ * text-shadow() pour une ombre sur un texte seulement
+ * box-shadow() pour une ombre sur une DIV, MAIN, SECTION...
+ * filter: drop-shadow() pour une ombre sur une image
+ */
+
+* {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+body {
+  background: transparent linear-gradient(130deg, #0E143C 0%, #F1C6D7 100%);
+  height: 100vh;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.btn-arround {
+  border: 1px solid white;
+  border-radius: 2rem;
+  padding: 4px 14px;
+}
+
+.btn-blue {
+  background: transparent linear-gradient(180deg, #179de9 0%, #00507c 100%);
+  color: white;
+  text-decoration: none;
+  padding: 10px 30px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+.btn-blue:hover {
+  background: transparent linear-gradient(180deg, #00507c 0%, #179de9 100%);
+  box-shadow: inset 0 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+.btn-light {
+  border: 1px solid;
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 9px 30px;
+  border-radius: 4px;
+  margin-left: 20px;
+}
+
+.phone-blue {
+  position: absolute;
+  top: 5%;
+  right: 19%;
+  width: 23%;
+  z-index: 10;
+  filter: drop-shadow(20px 20px 20px rgba(233, 233, 233, 0.5));
+}
+
+/* En-tête de la page */
+header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 0;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav a.logo img {
+  width: 6rem;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+}
+
+header nav ul li a:hover {
+  opacity: 0.5;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 120px 0 200px 0;
+  position: relative;
+}
+
+main h1 {
+  font-size: 2.5rem;
+}
+
+main p {
+  font-size: 1.3rem;
+  margin-top: 15px;
+  margin-bottom: 45px;
+}
+
+main div:first-of-type {
+  width: 40%;
+  padding-right: 100px;
+}
+
+main div img {
+  width: 35%;
+}
+
+main div img:first-of-type {
+  margin-right: 120px;
+  filter: drop-shadow(40px 40px 40px rgba(255, 0, 0, 0.5));
+}
+
+main div img:last-of-type {
+  filter: drop-shadow(40px 40px 40px rgba(255, 0, 0, 0.5));
+  margin-bottom: 30px;
+}
+
+footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+footer img {
+  width: 15%;
+  opacity: 0.5;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
