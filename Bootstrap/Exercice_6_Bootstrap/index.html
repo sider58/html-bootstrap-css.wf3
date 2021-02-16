@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Line Awesome -->
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css">
+
+        <title>Space</title>
+    </head>
+    <body>
+
+        <!-- Header de ma page -->
+        <header>
+            <div class="overlay-header">
+
+                <!-- Menu blanc mobile & tablette -->
+                <nav class="d-flex d-lg-none navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+
+                    <!-- Bouton burger "bootstrap" -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Logo centrer sur la nav -->
+                    <a class="navbar-brand" href="#">
+                        <img src="images/logo-short.svg" alt="Logo Space Short">
+                    </a>
+
+                    <!-- Menu à droite de la nav -->
+                    <ul class="list-unstyled d-flex my-auto">
+                        <li class="mr-3">
+                            <a href="#" class="text-dark">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-dark">
+                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Menu caché qui s'ouvre au clic du bouton burger -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="#">Pages</a>
+                            </li>
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="#">Works</a>
+                            </li>
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="#">Blog</a>
+                            </li>
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="#">Shop</a>
+                            </li>
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="#">Docs</a>
+                            </li>
+                            <li class="nav-item mr-4">
+                                <a class="btn btn-success" href="#">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+                                        <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                        <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+                                    </svg>
+                                    Signin
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                                        <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- Menu transparent ordinateur -->
+                <nav class="d-none d-lg-flex navbar navbar-expand-lg navbar-light">
+                    
+                    <!-- Logo -->
+                    <a class="navbar-brand" href="#">
+                        <img src="images/logo-white.svg" alt="Logo Space">
+                    </a>
+
+                    <!-- Bouton burger -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                
+                    <!-- Menu de droite -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="#">Pages</a>
+                            </li>
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="#">Works</a>
+                            </li>
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="#">Blog</a>
+                            </li>
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="#">Shop</a>
+                            </li>
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="#">Docs</a>
+                            </li>
+                            <li class="nav-item mr-4">
+                                <a class="btn btn-success" href="#">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+                                        <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                        <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+                                    </svg>
+                                    Signin
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                                        <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- Éléments en dessous de ma navbar -->
+                <section class="container">
+                    <div class="row align-items-center py-5">
+
+                        <!-- Colonne de gauche -->
+                        <div class="col-12 col-lg-7 mb-5 mb-lg-0 text-white font-weight-bold">
+                            <p class="text-uppercase mb-2">Join the change</p>
+                            <h1 class="display-4 font-weight-bold">Space service that moves work forward</h1>
+                        </div>
+
+                        <!-- Colonne de droite - Formulaire -->
+                        <div class="col-12 col-lg-5">
+                            <div class="bg-white rounded shadow-sm p-4">
+                                <form action="#">
+                                    <h2 class="font-weight-bold h3 py-3">Get started for free</h2>
+                                    <input type="text" placeholder="Enter your username" class="w-100 border rounded text-muted font-weight-bold p-3 mb-3">
+                                    <input type="email" placeholder="Enter your email address" class="w-100 border rounded text-muted font-weight-bold p-3 mb-3">
+                                    <input type="password" placeholder="Enter your password" class="w-100 border rounded text-muted font-weight-bold p-3 mb-3">
+                                    <button class="btn btn-success btn-block py-3">Get Started</button>
+                                    <!-- button type="submit">Get Started</button -->
+                                    <!-- input type="submit" value="Get Started" -->
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </header>
+
+        <!-- "Centre" de ma page -->
+        <main>
+
+            <!-- Logos des marques -->
+            <section class="py-5 border-bottom">
+                <div class="container">
+                    <div class="row text-center brands">
+                        <div class="col">
+                            <img src="images/paypal.png" alt="paypal">
+                        </div>
+                        <div class="col">
+                            <img src="images/slack.png" alt="slack">
+                        </div>
+                        <div class="d-none d-md-block col">
+                            <img src="images/samsung.png" alt="samsung">
+                        </div>
+                        <div class="d-none d-md-block col">
+                            <img src="images/airbnb.png" alt="airbnb">
+                        </div>
+                        <div class="d-none d-lg-block col">
+                            <img src="images/lenovo.png" alt="lenovo">
+                        </div>
+                        <div class="d-none d-lg-block col">
+                            <img src="images/spotify.png" alt="spotify">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Textes en "grille" -->
+            <section class="container py-5 my-5">
+                <div class="row">
+                    <!-- Colonne de gauche -->
+                    <div class="col-12 col-md-4">
+                        <div class="shadow-right">
+                            <div class="border-right-gray py-5">
+                                <h3 class="font-weight-bold h4 mb-5">3 methods Space can help to grow your business with</h3>
+                                <ol class="font-weight-bold text-muted">
+                                    <li class="mb-3 text-success icon-active">Features</li>
+                                    <li class="mb-3">Key benefits</li>
+                                    <li>Components</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Colonne de droite -->
+                    <div class="col-12 col-md-8">
+                        <div class="icons ml-0 ml-md-4 row row-cols-1 row-cols-md-2">
+                            <div class="col mb-5">
+                                <img src="images/consult-primary-icon.svg" alt="consult-primary-icon" class="mb-3">
+                                <p>This is where we sit down, grab a cup of coffee and dial in the details. Understanding the task at hand and ironing out the wrinkles is key.</p>
+                                <a href="#" class="font-weight-bold text-success text-decoration-none">Learn more ></a>
+                            </div>
+                            <div class="col mb-5">
+                                <img src="images/plan-brown-icon.svg" alt="plan-brown-icon" class="mb-3">
+                                <p>Now that we've aligned the details, it's time to get things mapped out and organized. This part is really crucial in keeping the project in line to completion.</p>
+                                <a href="#" class="font-weight-bold text-success text-decoration-none">Learn more ></a>
+                            </div>
+                            <div class="col mb-5">
+                                <img src="images/create-blue-icon.svg" alt="create-blue-icon" class="mb-3">
+                                <p>The time has come to bring those ideas and plans to life. This is where we really begin to visualize your napkin sketches and make them into beautiful pixels.</p>
+                                <a href="#" class="font-weight-bold text-success text-decoration-none">Learn more ></a>
+                            </div>
+                            <div class="col">
+                                <img src="images/develop-purple-icon.svg" alt="develop-purple-icon" class="mb-3">
+                                <p>Whether through commerce or just an experience to tell your brand's story, the time has come to start using development languages that fit your projects needs.</p>
+                                <a href="#" class="font-weight-bold text-success text-decoration-none">Learn more ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section grise -->
+            <section class="bg-light-gray">
+                <div class="container text-center pt-5">
+                    <p class="badge badge-pill badge-info">Key features</p>
+                    <h4 class="h1 font-weight-bold mt-3">Create hight quality products</h4>
+                    <p class="text-muted lead">See how creating and moving projects forward in Space will help your to stay in sync, hit deadlines, and reach your goals.</p>
+                    <div class="circle mt-5">
+                        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-play-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                        </svg>
+                    </div>
+                    <img src="images/mobiles.png" alt="mobiles" class="mobiles img-fluid">
+                </div>
+            </section>
+
+            <!-- Différents prix -->
+            <!-- "mt-prices" est une classe personnalisée pour appliquer un "margin-top" -->
+            <section class="py-5 mt-prices">
+                <div class="container py-5">
+
+                    <!-- Titre et description -->
+                    <div class="text-center mx-auto pb-5">
+                        <span class="badge badge-pill badge-info">Pricing plans</span>
+                        <h4 class="h1 mt-3 font-weight-bold">No additional costs. Pay for what you use.</h4>
+                        <p class="text-muted font-weight-bold">Choose the most suitable service for your needs with reasonable price.</p>
+                    </div>
+
+                    <!-- Les différents prix afficher grâce à une grille -->
+                    <div class="row">
+
+                        <!-- PLAN FREE -->
+                        <!-- "col-md-" permet de redimensionner la colonne sur tablette -->
+                        <!-- "col-lg-" permet de redimensionner la colonne sur ordinateur -->
+                        <!-- "order-2" permet de donne le positionnement de la colonne par rapport aux autres, soit en deuxième position sur mobile & tablette -->
+                        <!-- "order-lg-1" permet de donne le positionnement de la colonne par rapport aux autres, soit en première position sur ordinateur -->
+                        <div class="col-md-6 col-lg-4 order-2 order-lg-1 mb-5 mb-md-0">
+                            <div class="border rounded p-5">
+                                <p class="text-muted mb-3">Start</p>
+                                <h2 class="h1">Free</h2>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="py-2">
+                                        <!-- La classe "check-purple" est une classe personnalisée en CSS -->
+                                        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-check check-purple" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
+                                        </svg>
+                                        Community support
+                                    </li>
+                                    <li class="py-2">
+                                        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-check check-purple" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
+                                        </svg>
+                                        400+ pages
+                                    </li>
+                                    <li class="py-2">
+                                        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-check check-purple" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
+                                        </svg>
+                                        100+ header variations
+                                    </li>
+                                    <li class="py-2">
+                                        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-check check-purple" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
+                                        </svg>
+                                        20+ home page options
+                                    </li>
+                                </ul>
+                                <a href="#" class="btn btn-block btn-sm btn-purple py-2">Start Free Trial</a>
+                            </div>
+                        </div>
+
+                        <!-- PLAN 39$/MONTH -->
+                        <!-- "order-1" permet de donne le positionnement de la colonne par rapport aux autres, soit en première position sur mobile & tablette -->
+                        <!-- "order-lg-2" permet de donne le positionnement de la colonne par rapport aux autres, soit en deuxième position sur ordinateur -->
+                        <div class="col-md-6 col-lg-4 order-1 order-lg-2 offset-md-3 offset-lg-0 mb-5 mb-md-0">
+                            <div class="bg-success border rounded py-9 p-5 text-white">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <p class="h6 mb-3">Growing</p>
+                                    <!-- La classe "badge-success" a été surchargée en CSS -->
+                                    <p class="badge badge-pill badge-success">Recommended</p>
+                                </div>
+                                <h2 class="h1">$39<small>/month</small></h2>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="py-2">
+                                        <!-- La classe "check-white" est une classe personnalisée en CSS -->
+                                        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-check check-white" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
+                                        </svg>
+                                        Community support
+                                    </li>
+                                    <li class="py-2">
+                                        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-check check-white" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
+                                        </svg>
+                                        400+ pages
+                                    </li>
+                                    <li class="py-2">
+                                        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-check check-white" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
+                                        </svg>
+                                        100+ header variations
+                                    </li>
+                                    <li class="py-2">
+                                        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-check check-white" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
+                                        </svg>
+                                        20+ home page options
+                                    </li>
+                                </ul>
+                                <a href="#" class="btn btn-block btn-sm btn-light py-2">Subscribe Now</a>
+                            </div>
+                        </div>
+
+                        <!-- PLAN TEAM -->
+                        <!-- "order-3" permet de donne le positionnement de la colonne par rapport aux autres, soit en troisièmé position sur mobile, tablette & ordinateur -->
+                        <div class="col-md-6 col-lg-4 order-3">
+                            <div class="border rounded p-5">
+                                <p class="text-muted mb-3">Enterprise</p>
+                                <h2 class="h1">Team</h2>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="py-2">
+                                        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-check check-purple" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
+                                        </svg>
+                                        Community support
+                                    </li>
+                                    <li class="py-2">
+                                        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-check check-purple" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
+                                        </svg>
+                                        400+ pages
+                                    </li>
+                                    <li class="py-2">
+                                        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-check check-purple" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
+                                        </svg>
+                                        100+ header variations
+                                    </li>
+                                    <li class="py-2">
+                                        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-check check-purple" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z"/>
+                                        </svg>
+                                        20+ home page options
+                                    </li>
+                                </ul>
+                                <!-- La classe "btn-purple" est une classe personnalisée en CSS -->
+                                <a href="#" class="btn btn-block btn-sm btn-purple py-2">See Team Plans</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Barre de séparation -->
+            <hr class="border w-50 mx-auto mb-5">
+
+            <!-- Avis des clients -->
+            <section class="container py-5">
+
+                <!-- "thumbnail" Est une classe personnalisé en CSS pour les images -->
+                <div class="row thumbnail">
+
+                    <!-- "col-12" sur tous les écrans sauf à partir d'une tablette grâce à "col-md-6" -->
+                    <!-- "mb-lg-0" permet d'annuler le "margin-bottom" sur écran d'ordinateur -->
+                    <div class="col-12 col-md-6 text-center px-5 mb-5 mb-lg-0">
+                        <img src="images/img1.jpg" alt="Maria" class="rounded-circle mx-auto mb-2">
+                        <h4 class="h6">Maria Muzynska</h4>
+                        <p class="text-muted">
+                            "I love Space! I love the ease of use, I love the fact that I have total creative freedom. The template is really nice and offers quite a large set of options. It's beautiful and the coding is done quickly and seamlessly."
+                        </p>
+                    </div>
+
+                    <!-- "col-12" sur tous les écrans sauf à partir d'une tablette grâce à "col-md-6" -->
+                    <div class="col-12 col-md-6 text-center px-5">
+                        <img src="images/img15.jpg" alt="Maria" class="rounded-circle mx-auto mb-2">
+                        <h4 class="h6">Markus Brown</h4>
+                        <p class="text-muted">
+                            "We are incredibly impressed with Space and how well it supports its customers with amazing products and services. One simple subscription gives you access to all our tools, plus so much more."
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Partie avec dégradé ! ;) -->
+            <!-- "overlay-footer" applique le dégradé de couleur sur la section -->
+            <section class="overlay-footer">
+
+                <!-- "footer-img-gradient" applique l'image sur le dégradé -->
+                <!-- L'image ayant un fond transparent, d'abord j'applique un dégadré et par dessus l'image -->
+                <!-- L'inverse aura fait que l'image aurait été caché par le dégardé et donc non-visible 🤷‍♂️ -->
+                <div class="footer-img-gradient">
+                    <div class="container py-5">
+
+                        <!-- Centrage vertical avec la classe "align-items-center" -->
+                        <div class="row align-items-center">
+
+                            <!-- "text-lg-left" me permet d'aligne mon texte à gauche quand je passe sur ordinateur, sinon -->
+                            <!-- je centre le texte pour les autres écrans avec "text-center" -->
+                            <div class="col-12 col-lg-6 text-white text-center text-lg-left pb-3 pb-lg-0">
+                                <h2 class="h3">Get started with Space</h2>
+                                <p class="lead">
+                                    Space gives you everything you need to manage business, build great stuff, and reach your goals.
+                                </p>
+                            </div>
+                            <div class="col-12 col-lg-6 text-center text-lg-right">
+                                <a href="#" class="btn btn-purple py-3 mr-3">Create Free Account</a>
+                                <a href="#" class="btn btn-light py-3">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <!-- "bg-dark" a été surchargé our obtenir la bonne couleur de fond -->
+        <footer class="bg-dark py-5">
+            <div class="container text-white">
+                <div class="row">
+
+                    <!-- Plus d'informations sur les "order" : https://getbootstrap.com/docs/4.5/utilities/flex/#order -->
+                    <!-- "order-last", comme son nom l'indique, le défini en dernière position -->
+                    <div class="col-lg-4 order-lg-1 d-flex align-items-start flex-column order-last">
+                        <img src="images/logo-short-white.svg" alt="Logo short white" class="py-4 pb-lg-5 pt-lg-0">
+                        
+                        <!-- Dropdown est un composant de Bootstrap -->
+                        <div class="dropdown pb-3 pb-lg-5 mb-lg-2">
+
+                            <!-- "btn-outline-light" a été surchargé en CSS -->
+                            <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                English
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">French</a>
+                                <a class="dropdown-item" href="#">English</a>
+                            </div>
+                        </div>
+                        <p class="small text-muted">All rights reserved. &copy; Space. 2019 Htmlstream.</p>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 order-lg-3 mb-lg-0">
+                        <h3 class="h6 text-white mb-3">About</h3>
+                        <ul class="list-unstyled small text-muted">
+                            <li class="mb-3">About Agency</li>
+                            <li class="mb-3">About Start-up</li>
+                            <li class="mb-3">Services Agency</li>
+                            <li>Services Start-up</li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 order-lg-4 mb-lg-0">
+                        <h3 class="h6 text-white mb-3">Compagny</h3>
+                        <ul class="list-unstyled small text-muted">
+                            <li class="mb-3">Contact Us</li>
+                            <li class="mb-3">Help</li>
+                            <li class="mb-3">Careers</li>
+                            <li class="mb-3">Terms & Conditions</li>
+                            <li>Privacy & Policy</li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 order-lg-5 mb-lg-0">
+                        <h3 class="h6 text-white mb-3 mt-5 mt-lg-0">Shop</h3>
+                        <ul class="list-unstyled small text-muted">
+                            <li class="mb-3">Classic</li>
+                            <li class="mb-3">Single Product</li>
+                            <li>Checkout</li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 order-lg-6 mb-lg-0">
+                        <h3 class="h6 text-white mb-3 mt-5 mt-lg-0">Social</h3>
+                        <ul class="list-unstyled small text-muted">
+                            <li class="mb-3">
+                                <i class="lab la-facebook-f"></i>
+                                Facebook
+                            </li>
+                            <li class="mb-3">
+                                <i class="lab la-twitter"></i>
+                                Twitter
+                            </li>
+                            <li class="mb-3">
+                                <i class="lab la-dribbble"></i>
+                                Dribbble
+                            </li>
+                            <li>
+                                <i class="lab la-github"></i>
+                                GitHub
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- En espérant que l'exercice est quand même été apprécié et navré pour ceux qui n'aime pas Bootstrap -->
+        <!-- Dernier mot pour dire que dans l'ensemble, vous vous débrouillé super bien et que je suis vraiment fier du travail accompli jusqu'ici ;) -->
+        <!-- Bonne soirée et à demain ! -->
+        <!-- :D -->
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+    </body>
+</html>
