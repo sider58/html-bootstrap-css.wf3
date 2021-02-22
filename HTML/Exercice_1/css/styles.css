@@ -1,0 +1,28 @@
+/* Selectionne tout les éléments <p> de la page */
+p {
+    color:blueviolet;
+}
+/* Selectionne tous les éléments <h4> de la page */
+h4 {
+    /* color : #b81cb8 */
+    color: rgb(136, 81, 10);
+}
+
+/*
+* Classe CSS avec un nom personnalisé que l'on applique nous même
+* Un seul élément de la page en cours
+*/
+.ma_classe {
+    border: 10px solid #000000;
+}
+
+/* Classe CSS avec nom personnalisé que l'on applique sur un seul élément de la page en cours
+*  Un seul élément de la page en cours
+*/
+#mon_id {
+    color:crimson;
+}
+
+#mon_id_2 {
+    color: indigo;
+}
